@@ -5,13 +5,14 @@ class Contrat
 	public static $filtres = 
 		array(
 			'id' => FILTER_VALIDATE_INT,
-			'titre' => FILTER_SANITIZE_ENCODED,
-			'client' => FILTER_SANITIZE_ENCODED,
-			'description' => FILTER_SANITIZE_ENCODED,
-			'technologie' => FILTER_SANITIZE_ENCODED,
-			'debut' => FILTER_SANITIZE_ENCODED
+			'titre' => FILTER_UNSAFE_RAW,
+			'client' => FILTER_UNSAFE_RAW,
+			'description' => FILTER_UNSAFE_RAW,
+			'technologie' => FILTER_UNSAFE_RAW,
+			'debut' => FILTER_UNSAFE_RAW
 		);
 		
+	protected $id;
 	protected $titre;
 	protected $client;
 	protected $description;
